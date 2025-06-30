@@ -43,6 +43,10 @@ def create_app(test_config=None):
     def visit():
         return render_template("pages/visit.html")
 
+    @app.route("/status")
+    def status():
+        return render_template("pages/status.html")
+
     class ContactForm(FlaskForm):
         name = StringField(
             "Name",
